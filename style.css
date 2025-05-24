@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --primary-color:Green 500: hsl(158, 36%, 37%);
+    --secondary-color: Green 700: hsl(158, 42%, 18%);
+    --accent-color: Black: hsl(212, 21%, 14%);
+    --background-color: Cream: hsl(30, 38%, 92%);
+    --font-family: 'montserrat', sans-serif;
+    --font-family-heading: 'fraunces', serif;
+    --font-size-base: 14px;
+    --paragraph-color: gray: hsl(228, 12%, 48%);
+    --container-color: white: hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(245, 231, 234)
+}
+.container{
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    gap: 1.5rem;
+    background: white;
+   
+}
+.product img{
+    display:block;
+    width: 100%;
+    border-radius: 10px;
+}
+h3{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #6c7289;
+    margin-left: 2rem;
+}
+h1{
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    
+    color: #1c232b;
+    margin-left: 2rem;
+}
+.decription{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #6c7289;
+    margin-left: 2rem;
+    line-height: 1.5rem;
+}
+.prices{
+    display: flex;
+    gap: 1.5rem;
+    
+}
+.price , .before{
+    display: inline-block;
+}
+.price{
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    font-size: 2rem;
+    color: #3c8067;
+    margin-left: 2rem;
+}
+.before{
+    padding-top: 10px;
+    font-family: var(--font-family);
+    color: #6c7289;
+    text-decoration: line-through;
+}
+.btn{
+    background: #3c8067;
+    color: #f2ebe3;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 17px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    border-color: transparent;
+}
+.btn:hover{
+    background: #2a5b4c;
+    color: #f2ebe3;
+    cursor: pointer;
+}
+#ds{
+    display: none;
+}
+@media (min-width: 768px) {
+    
+    .container{
+        display: grid;
+        grid-template-columns: auto auto ;
+        margin-top: 10rem;
+        gap: 2rem;
+        
+    }
+    .product{
+        display: block;
+        height: 500px;
+        grid-row-start: 1;
+        grid-row-end: 6;
+        
+    }
+    #mobile{
+        display: none;
+    }
+    #ds{
+        display: block;
+        height: 500px;
+    }
+    h3{
+        margin-top: 2rem;
+    }
+    h1{
+        width: 30%;
+        white-space: pre-line;
+    }
+    .decription{
+        width: 30%;
+    }
+    .btn{
+        width: 30%;
+        margin: auto 0;
+    }
+   
+}
